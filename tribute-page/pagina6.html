@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<link rel="preconnet" href="https://fonts.google.com/" crossorigin>
+	<link rel="preconnet" href="https://fonts.google.com/">
+	<link href="https://fonts.google.com/specimen/Abril+Fatface" rel="stylesheet">
+	<link href="https://lineicons.com/" rel="stylesheet">
+    <title>Mi primera página</title>
+
+    <style>
+	    html, body {
+		    display: flex;
+		    flex-direction: column;
+		    height: 100%;
+	    }
+		body{
+		    margin: 0px;
+			display: flex;
+			flex-direction: column;
+			font-family: 'Abril Fatface', 'Josefin Slab';
+			background:#f9fff5 ;
+			color: #051900;
+
+	    }
+		#header {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		} 
+		h1{
+		    text-align:center ;
+			font-family: Styles;
+			color: #8ab446
+			
+		}
+		h2{
+		    text-align:center ;
+			color: #bad5ad;
+		}
+		p{
+		    text-align:center ;
+		}
+		#main-content-container {
+		    display: flex;
+		}
+		#links-sidebar {
+            flex: 2;
+            background: #ccd0a8
+        }
+		#main-content {
+		    flex:6;
+			padding: 10px 20% 10px 10px;
+		}
+		.main-content__img--full-width {
+			width: 75%; 
+		}
+		a {
+			padding: 35px;
+		} 
+		#footer {
+			padding: 0 20px 20px 20px;
+			margin-top: auto;
+			display: flex;
+			background: #d9e0c5 ;
+		}
+		.footer__section {
+			flex: 1;
+			display: flex;
+			align-items: center ;
+			flex-direction: column;
+		}
+		.social__networks {
+			display:flex ;
+			flex-direction: column;
+			gap: 20px;
+		} 
+		.social__network {
+			display:flex ;
+			align-items: center;
+		} 
+		.social__icon {
+			font-size:32px ;
+		} 
+		.social__icon-handler {
+			margin-left:10px ;
+		}
+		a {
+			text-decoration:none ;
+			color: inherit;
+		}  
+		a:hover {
+			text-decoration:underline;
+			text-underline-offset: 3px;
+		} 
+		main {
+			display:flex;
+			flex-direction: row;
+		}
+		input [type=email], textarea {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			box-sizing: border-box;
+			border: 3px solid #aad4c1;
+			transition: 0.5s;
+			outline: none;
+		}
+		input [type=email]:focus, textarea:focus {
+			border: 3px solid#dde2e3;
+		}
+		input [type=submit] {
+			background: #dde2e3;
+			border: none;
+			color: white;
+			padding: 16px 32px;
+			text-decoration: none;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+		span {
+			display:flex;
+			flex-direction: column;
+		}
+		#navigation-bar ul {
+            margin: 0;
+            padding: 0;
+            border: 1px solid #e7e7e7;
+            background-color: #f3f3f3;
+        }
+
+        #navigation-bar li {
+            display: inline-block;
+			text-align: center;
+        }
+
+        #navigation-bar li a {
+            display: block;
+            color: #665;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+    </style> 
+	 <script>
+        function myFunction() {
+            const navigationBar = document.getElementById("navigation-bar");
+            if (navigationBar.className === "navigation-bar") {
+                navigationBar.className += " responsive";
+            } else {
+                navigationBar.className = "navigation-bar";
+            }
+        }
+    </script>
+</head>
+<body>
+	<img src="18.jpg" width="100%" height="250%">
+<nav id="navigation-bar" class="navigation-bar">
+	<ul>
+		<li><a class="active" href="https://bangtan.fandom.com/es/wiki/RM_(mixtape)">mixtape</a></li>
+		<li><a href="https://www.nacionrex.com/bts-rm-curiosidades-talentos-ocultos-t202001040001.html">curiosidades</a></li>
+		<li><a href="https://www.usbtsarmy.com/about-rm/predebut-thru-2014">Pre-debut</a></li>
+		<li><a href="https://www.youtube.com/watch?v=iOjmwAz76g4">Discurso ONU</a></li>
+		<li class="menu__hamburger-icon">
+			<a  href="javascript:void(0);" onclick="myFunction()">
+				<i class="lni lni-menu"></i>
+			</a>
+		</li>
+	</ul>
+</nav>
+<header id="header">
+	<h1> Kim Namjoon </h1>
+	<p>12 de septiembre 1994</p>
+</header>
+<div id="main-content-container">
+	<aside id="links-sidebar">
+		<div class="seccion-contenido-principal">
+			<table border="0px" style="width:40%">
+				<tr>
+					<th>
+						<div style="background:#d3e29d ; text-align: center">RM</div
+					</th>
+				</tr>
+				<tr>
+					<th>
+						<img src="9.jpg" alt="RM" width="250" height="250" >
+					</th>
+				</tr>
+				<tr>
+					<th>
+						<div style="background:#d3e29d ; text-align: center">Informacion personal</div
+						
+					</th>
+				</tr>
+				<tr>
+					<th>
+						NOMBRE DE NACIMIENTO <em>Kim Namjoon</em>
+					</th>
+				</tr>
+				<tr>
+					<th>
+						NACIOMIENTO <em>12 de septiembre 1994 Dongjak-go, Seul, Corea del sur</em>
+				    </th>
+				</tr>
+				<tr>
+					<th>
+						NACIONALIDAD <em>Surcoreana</em>
+					</th>
+				</tr>
+				<tr>
+					<th>
+						<div style="background: #d3e29d; text-align: center">Informacion Profesional</div>
+					</th>
+				</tr>
+				<tr>
+					<th>
+						OTROS NOMBRES <em>RM</em>
+					</th>
+				</tr>
+				<tr>
+					<th>
+						OCUPACION <em>rapero</em>
+					</th>
+				</tr>
+				<tr>
+					<th>
+						GENERO(s) <em>K-pop, hip hop, R&B</em>
+					</th>
+				</tr>
+				<tr>
+				
+					<th>DISCOGRAFIA(s) <em>Big Hig, Universal Japon</em></th>
+					
+				</tr>
+			</table>
+		</div>
+	</aside>
+    <section id="main-content">
+	    <img src="8.jpg" alt="Kim Namjoon 2021" class="main-content__img--full-width">
+
+		    <h2>Biografia</h2>
+			<p>El rapero, bailarín y modelo nació el 12 de septiembre de 1994 en Seúl, Corea del Sur. Es uno de los idols 
+				más queridos por la legión de fans, pues más allá de su papel en la dirección de la banda, que algunos 
+				describirían como "padre de familia", siempre está apoyando a sus compañeros y buscando la felicidad de 
+				cada uno de los miembros de la agrupació.</p>
+			<p>Más allá de sus aportaciones a BTS a nivel profesional como compositor, cantante y productor, Namjoon se ganó 
+				el puesto de líder por su capacidad para motivar, apoyar y estimular la creatividad de sus compañeros. Además 
+				de buscar la felicidad de todos y dirigirlos en el camino correcto para cumplir sus metas.  Pero eso no es todo 
+				porque el rapero también fue parte fundamental para que el resto del Bangtan pusieran a prueba su nivel de inglés, 
+				dándoles clases, tips de pronunciación e, incluso, fungiendo como su traductor no oficial.</p>
+			<h2>integracion a BTS</h2>	
+			<p>Kim Namjoon fuKim Namjoon fue el primero en unirse a Big Hit, la compañía de entretenimiento que maneja a BTS. 
+				Entonces Kim Namjoon no tenía planeado ser un idol y dirigir su carrera hacia el rap, pero así lo hizo y su 
+				talento lo llevó a convertirse en el miembro fundador de la banda surcoreana.  Con algunas modificaciones, 
+				finalmente Kim Namjoon, junto a Suga y J-Hope, cumplió su sueño en el mundo de la música y formaron una boy 
+				band que marcaría un antes y un después en la historia del K-pop.</p>
+	</section>
+</div>
+		
+
+		<footer id="footer">
+			<div class="footer__social footer__section">
+				<h2>Mis redes</h2>
+		
+				<div class="social__networks">
+					<div class="social__network">
+						<span class="social__icon-container"><i class="lni lni-github-original social__icon"></i></span>
+						<span class="social__icon-handler"> <a href="https://www.instagram.com/julieta.canela21/"> julieta.canela21 </a> </span>
+					</div>
+		
+					<div class="social__network">
+						<span class="social__icon-container"><i class="lni lni-linkedin-original social__icon"></i></span>
+						<span class="social__icon-handler">
+							<a href="https://www.facebook.com/profile.php?id=100017367429575"> Julieta Ramirez </a>
+						</span>
+					</div>
+				</div>
+		
+			</div>
+			<div class="footer__contact-form footer__section">
+				<h2>Contacto</h2>
+				<div>
+					<form>
+						<label for="contactEmail"> Correo electronico:</label>
+						<input id="contactEmail" required type="email" placeholder="Ingresa tu correo electronico">
+		
+						<label for="contactMessage"> Mensaje:</label>
+						<textarea id="contactMessage" required rows="4" cols="50"> </textarea>
+		
+						<input type="submit" value="Enviar">
+					</form>
+				</div>
+			</div>
+			<div class="footer__more-sites footer__section">
+				<h2>Otros de mis sitios</h2>
+			</div>
+		</footer>
+		</body>
+		</html>
+
+
+
+
+
+
+</body>
+</html>
