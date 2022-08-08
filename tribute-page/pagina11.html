@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejemplo layout flexbox</title>
+	<style>
+        html, body {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            background: #eeeeee;
+            color:#3d0b60 ;
+            font-family: 'Roboto', sans-serif;
+        }
+		
+		h1{
+		    text-align:center ;
+			font-family: ArialBlack;
+			color: #4b1c71
+		}
+
+		h2{
+		    text-align:center ;
+			color: #7f4ca5;
+			font-family: Calibri;
+		}
+
+		h3{
+		    text-align:center ;
+			font-family: Calibri;
+        }
+
+		p{
+		    text-align:center ;
+			font-family: Calibri;
+        }
+
+        #header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+			text-align: center;
+        }
+
+        #navigation-bar ul {
+            margin: 0;
+            padding: 0;
+            border: 1px solid #f1d7ff;
+            background-color: #fff0ff
+;
+        }
+
+        #navigation-bar li {
+            display: inline-block;
+        }
+
+        #navigation-bar li a {
+            display: block;
+            color: #665;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+	
+        }
+
+        #navigation-bar li a:hover:not(.active) {
+            background-color: #f1d7ff;
+        }
+
+        #navigation-bar li a.active {
+            color: #ececec;
+            background-color: #a87bc7;
+        }
+
+        #navigation-bar .menu__hamburger-icon {
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            #navigation-bar li:not(:first-child) {
+                display: none;
+            }
+            #navigation-bar li.menu__hamburger-icon {
+                display: block;
+                float: right;
+            }
+            #navigation-bar.responsive {
+                position: relative;
+            }
+            #navigation-bar.responsive .menu__hamburger-icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            #navigation-bar.responsive .menu__hamburger-icon a {
+                color: #fff;
+            }
+            #navigation-bar.responsive li {
+                float: none;
+                display: block !important;
+            }
+            #navigation-bar.responsive li a{
+                text-align: left;
+            }
+        }
+
+		@media screen and (max-width: 600px) {
+            #links-sidebar {
+                display: none;
+            }
+        }
+
+        #main-content {
+            flex: 6;
+            padding: 10px 20% 10px 10px;
+        }
+
+        @media screen and (max-width: 600px) {
+            #main-content {
+                padding-right: 10px;
+            }
+        }
+
+        #main-content-container {
+            display: flex;
+        }
+
+        #links-sidebar {
+            flex: 3;
+            background: #e0b0ff
+        }
+
+		#links-sidebar ul {
+            padding: 0 0 0 10px;
+			margin-left: 22px;
+        }
+
+		
+
+        #main-content {
+            flex: 6;
+            padding: 10px 20% 10px 10px;
+        }
+
+        .main-content__img--full-width {
+            width: 100%;
+        }
+
+        #footer {
+            padding: 0 20px 20px 20px;
+            margin-top: auto;
+            display: flex;
+            background: #f1d7ff;
+        }
+
+        .footer__section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .social__networks {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .social__network {
+            display: flex;
+            align-items: center;
+        }
+
+        .social__icon {
+            font-size: 32px;
+        }
+
+        .social__icon-handler {
+            margin-left: 10px;
+        }
+
+        input[type=email], textarea {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 3px solid #e7e7e7;
+            transition: 0.5s;
+            outline: none;
+        }
+
+        input[type=email]:focus, textarea:focus {
+            border: 3px solid #f3f3f3;
+        }
+
+        input[type=submit] {
+            background:#a87bc7;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+		p {
+           font-family:  PT Sans Narrow;
+		   text-align: center;
+        
+        }
+
+    </style>
+
+
+    <script>
+        function myFunction() {
+            const navigationBar = document.getElementById("navigation-bar");
+            if (navigationBar.className === "navigation-bar") {
+                navigationBar.className += " responsive";
+            } else {
+                navigationBar.className = "navigation-bar";
+            }
+        }
+    </script>
+</head>
+<body>
+	<img src="bi.jpg" width="100%" height="250%">
+<nav id="navigation-bar" class="navigation-bar">
+	<ul>
+		<li><a class="active" href="pagina4.html">Inicio</a></li>
+		<li><a href="pagina13.html">Integrantes</a></li>
+		<li><a href="pagina16.html">curiosidades</a></li>
+		<li><a href="pagina14.html">Pre-debut</a></li>
+		<li><a href="pagina17.html"> ONU Love Myself</a></li>
+		<li><a href="pagina15.html"> Peliculas</a></li>
+		<li><a href="pagina18.html"> Fanchat</a></li>
+		<li class="menu__hamburger-icon">
+			<a  href="javascript:void(0);" onclick="myFunction()">
+				<i class="lni lni-menu"></i>
+			</a>
+		</li>
+	</ul>
+</nav>
+
+
+
+
+<div id="main-content-container">
+    <aside id="links-sidebar" >
+		<br>
+		<h3><ul style="list-style-type:circle"> Grandes exitos </h3></ul>
+		<ul style="list-style-type: circle;">
+			<li><a href="https://www.youtube.com/watch?v=TbjUXK2M5n8">Born Singer</a></li>
+			<li><a href="https://www.youtube.com/watch?v=rBG5L7UsUxA">No More Dream</a></li>
+			<li><a href="https://www.youtube.com/watch?v=7C2z4GqqS5E">Fake Love</a></li>
+			<li><a href="https://www.youtube.com/watch?v=pBuZEGYXA6E">idol</a></li>
+			<li><a href="https://www.youtube.com/watch?v=mPVDGOVjRQ0">ON</a></li>
+			<li><a href="https://www.youtube.com/watch?v=gdZLi9oWNZg">Dynamite</a></li>
+			<li><a href="https://www.youtube.com/watch?v=WMweEpGlu_U">Butter</a></li>
+		</ul>
+		<br>
+		<h3><ul style="list-style-type:circle"> Albumes </h3></ul>
+		<ul style="list-style-type: circle;">
+			<li><a href="https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y?si=4JHddXc-SAK18F0h610Q2w">Love yourself:Answer</a></li>
+		    <li><a href="https://open.spotify.com/album/1k5bJ8l5oL5xxVBVHjil09?si=a0nYkPeeTdqA2Vjb5GV01g">The most beautiful moment in life: Young Forever</a></li>
+		    <li><a href="https://open.spotify.com/album/5W1XY5ucNATjTULERvXx9j?si=8fv34qI8Rhye6qQTmRxk3A">Map of the soul:7</a></li>
+		    <li><a href="https://open.spotify.com/album/6nYfHQnvkvOTNHnOhDT3sr?si=_nUVYPmQTJaNBZLNjX_Aiw">BE</a></li>
+		    <li><a href="https://open.spotify.com/album/1vhNGBTFoaSTLbHjPGFIlF?si=MjNPmf8JTTW5gfS-meZdTg">Wings</a></li>
+		    <li><a href="https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB?si=J_ctL2jeT5GebUPFGnlDGA">Proof</a></li>
+	    </ul>
+		<br>
+		<h3><ul style="list-style-type:circle"> Premiaciones </h3></ul>
+		<ul style="list-style-type: circle;">
+			<li><a href="pagina8.html">Mama</a></li>
+		    <li><a href="pagina9.html">MMA</a></li>
+		    <li><a href="pagina10.html">billboard Music Awards</a></li>
+		    <li><a href="pagina11.html">SBS The Show</a></li>
+		    <li><a href="pagina 12.html">American Music Awards</a></li>
+	</aside>
+
+    
+    <section id="main-content">
+		<header id="header">
+			<h1>SBS The Show</h1>
+			<p>Inkigayo es un programa de musica de Corea del Sur, a través del canal SBS este programa de television muestra lo 
+				mas nuevo y mejor en la musica, principalmente en el K-pop; las agrupaciones presentan sus canciones principales,
+				dando todo de si sobre el escenario para resaltar y conseguir el tan anhelado premio.</p>
+		</header>
+        <img src="l.jpg" alt="BTS en Inkigayo 2022" class="main-content__img--full-width">
+		    <p> Hoy en dia BTS es una banda de K-pop con relevancia mundial, que no solo ha abierto el camino del genero musical,
+			si no tambien lo ha popularizado de cierta forma y probablemente sea la banda de K-pop mas conocida en el planeta. </p>
+		    <p>BTS reina en cuanto a popularidad y fans, el apoyo desde casa para esta agrupacion es muy intenso ,por lo tanto, ARMY no solo los ha hecho
+			ganar en premios internacionales si no tambien en Inkigayo, acumulando 28 wins en lo que llevan de carrera, con con tan solo 12 canciones. Y aunque ya no hagan un performance
+		    en el programa, la banda sigue acumulando exitos en este programa de Core del Sur. </p>
+        
+			<li><a href="https://www.youtube.com/watch?v=GcVAMt5fRow"> For Youth Inkigayo </a></li>
+			<li><a href="https://www.youtube.com/watch?v=TCxaqWaW-Ok">Fire Inkigayo</a></li>
+			<li><a href="https://www.youtube.com/watch?v=ski-AeNGzOQ"> ON Inkigayo</a></li>
+		    <li><a href="https://www.youtube.com/watch?v=vSfhZXGw1JA"> Dynamite</a></li> 
+
+
+       
+    </section>
+</div>
+
+<footer id="footer">
+    <div class="footer__social footer__section">
+        <h2>Mis redes</h2>
+
+        <div class="social__networks">
+            <div class="social__network">
+                <span class="social__icon-container"><i class="lni lni-instagram-original social__icon"></i></span>
+                <span class="social__icon-handler"> <a href="https://www.instagram.com/julieta.canela21/"> @julieta.canela21 </a> </span>
+            </div>
+
+            <div class="social__network">
+                <span class="social__icon-container"><i class="lni lni-facebook social__icon"></i></span>
+                <span class="social__icon-handler">
+                    <a href="https://www.facebook.com/profile.php?id=100017367429575"> Julieta Ramirez </a>
+                </span>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer__contact-form footer__section">
+        <h2>Contacto</h2>
+        <div>
+            <form>
+                <label for="contactEmail"> Correo electronico:</label>
+                <input id="contactEmail" required type="email" placeholder="Ingresa tu correo electronico">
+
+                <label for="contactMessage"> Mensaje:</label>
+                <textarea id="contactMessage" required rows="4" cols="50"> </textarea>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+    <div class="footer__more-sites footer__section">
+        <h2>Otros de mis sitios</h2>
+    </div>
+</footer>
+</body>
+</html>
+12:53
+<script>
+    function myFunction() {
+        const navigationBar = document.getElementById("navigation-bar");
+        if (navigationBar.className === "navigation-bar") {
+            navigationBar.className += " responsive";
+        } else {
+            navigationBar.className = "navigation-bar";
+        }
+    }
+</script>
+12:54
+<li class="menu__hamburger-icon">
+    <a  href="javascript:void(0);" onclick="myFunction()">
+        <i class="lni lni-menu"></i>
+    </a>
+</li>
+
+		
+	
+
+	
+</body>
+</html>
+
+
