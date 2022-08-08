@@ -7,16 +7,12 @@
     <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ejemplo layout flexbox</title>
-    <style>
+	<style>
         html, body {
             display: flex;
             flex-direction: column;
             height: 100%;
         }
-
-		div{
-		    width:100%;
-		}
 
         body {
             margin: 0;
@@ -24,29 +20,16 @@
             color:#3d0b60 ;
             font-family: 'Roboto', sans-serif;
         }
-
 		h1{
 		    text-align:center ;
-			font-family: ArialBlack;
+			font-family: Styles;
 			color: #4b1c71
 		}
-
 		h2{
 		    text-align:center ;
 			color: #7f4ca5;
-			font-family: Calibri;
+			font-family: waymar;
 		}
-
-		h3{
-		    text-align:center ;
-			font-family: Calibri;
-        }
-
-		p{
-		    text-align:center ;
-			font-family: Calibri;
-        }
-
         #header {
             display: flex;
             flex-direction: column;
@@ -116,23 +99,6 @@
             }
         }
 
-		@media screen and (max-width: 600px) {
-            #links-sidebar {
-                display: none;
-            }
-        }
-
-        #main-content {
-            flex: 6;
-            padding: 10px 20% 10px 10px;
-        }
-
-        @media screen and (max-width: 600px) {
-            #main-content {
-                padding-right: 10px;
-            }
-        }
-
         #main-content-container {
             display: flex;
         }
@@ -144,10 +110,11 @@
 
 		#links-sidebar ul {
             padding: 0 0 0 10px;
-			margin-left: 22px;
         }
 
-		
+		#links-sidebar li {
+            list-style: none;
+        }
 
         #main-content {
             flex: 6;
@@ -233,6 +200,7 @@
 
     </style>
 
+
     <script>
         function myFunction() {
             const navigationBar = document.getElementById("navigation-bar");
@@ -249,12 +217,10 @@
 <nav id="navigation-bar" class="navigation-bar">
 	<ul>
 		<li><a class="active" href="pagina4.html">Inicio</a></li>
-		<li><a href="pagina13.html">Integrantes</a></li>
-		<li><a href="pagina16.html">curiosidades</a></li>
-		<li><a href="pagina14.html">Pre-debut</a></li>
-		<li><a href="pagina17.html"> ONU Love Myself</a></li>
-		<li><a href="pagina15.html"> Peliculas</a></li>
-		<li><a href="pagina18.html"> Fanchat</a></li>
+		<li><a href="https://bangtan.fandom.com/es/wiki/RM_(mixtape)">mixtape</a></li>
+		<li><a href="https://www.nacionrex.com/bts-rm-curiosidades-talentos-ocultos-t202001040001.html">curiosidades</a></li>
+		<li><a href="https://www.usbtsarmy.com/about-rm/predebut-thru-2014">Pre-debut</a></li>
+		<li><a href="https://www.youtube.com/watch?v=iOjmwAz76g4">Discurso ONU</a></li>
 		<li class="menu__hamburger-icon">
 			<a  href="javascript:void(0);" onclick="myFunction()">
 				<i class="lni lni-menu"></i>
@@ -267,7 +233,6 @@
 
 
 <div id="main-content-container">
-
     <aside id="links-sidebar" >
 		<br>
 		<h3><ul style="list-style-type:circle"> Grandes exitos </h3></ul>
@@ -303,38 +268,27 @@
     
     <section id="main-content">
 		<header id="header">
-			<h1>Bangtan</h1>
-			<p> "No importa quien seas, tu genero, tu color de piel, tu
-				identidad. Encuentra tu nombre y encuentra tu voz"
-				<br>
-				-Kim Namjoon-</p>
+			<h1>American Music Awards</h1>
+			<p>Los American Music Awards —a menudo llamados AMA— son premios entregados a lo mejor de la música, reconocen a los artistas más populares.</p>
+			<p>Fueron creados por el presentador de televisión Dick Clark en 1973 para competir con los premios Grammy, luego de que la ceremonia de ese año
+				se mudara a Nashville, Tennessee. Michael Jackson y Donny Osmond animaron la primera entrega junto Rodney Allen Rippy y Ricky Segall en 1974.</p>
 		</header>
-        <img src="ki.jpg" alt="BTS 2021" class="main-content__img--full-width">
+        <img src="d.jpg" alt="BTS en Inkigayo 2022" class="main-content__img--full-width">
+		    <p> La banda surcoreana BTS arrasa año con año en estos premios al ganar mas de 9 premios durante su carrera gannando en 2021 una de las categorias
+				mas importantes "artista del año" </p>
+		    <p>En 2021 fue el mejor año de bts en estos premios, ya que han sido ganadores de todas las categorias a las que estaban nominados en los American
+				Music Award: Mejor Grupo Pop, Mejor Canción pop por “Butter” y Artista del Año. Obiamente, el discurso que han dado al recoger este último nos
+				ha edulcorado el corazon y nos ha recordado por qué pertetenecemos a la ARMY </p>
+			<p><strong> ‘‘Hace cuatro años, debutábamos en este mismo escenario’’</strong>, comentaba Bangtan, a la vez que agradecía a las fans por haberles llevado a donde están ahora.
+				Mientras que Jungkook se ponía tan nervioso, que no era capaz de pronunciar una palabra en inglés.</p>
+        
+			<li><a href="https://www.youtube.com/watch?v=AcXio81i9TE"> Butter 2021 AMAs </a></li>
+			<li><a href="https://www.youtube.com/watch?v=Vr_0ipbiALc">Dynamite 2020 AMAs</a></li>
+			<li><a href="https://www.youtube.com/watch?v=Vr_0ipbiALc"> My universe Coldplay X BTS AMAs</a></li>
+		   
 
-        <h2>Biografía</h2>
-        <p>BTS es un grupo surcoreano formado en Seúl en 2010 y que debutó en 2013 bajo la compañía Big Hit Music. 
-			Está compuesto por siete integrantes: Jin, Suga, J-Hope, RM, Jimin, V y Jungkook, quienes coescriben y
-			coproducen la mayor parte de su material discográfico. A pesar de haber sido creado con un estilo principalmente
-			hip hop, ha llegado a incorporar una gran variedad de géneros en su repertorio musical.
-		</p>
-        <p>La formación de BTS empezó en 2010, después de que el CEO de Big Hit, Bang Si-hyuk, firmara un contrato con 
-			RM tras escucharlo rapear. El mismo año, la compañía realizó las audiciones Hit It, en las que Suga quedó en 
-			segundo lugar.Posteriormente se unió el resto de integrantes y, aunque la alineación se cambió en varias ocasiones,
-			finalizó con Jin, Suga, J-Hope, RM, Jimin, V y Jungkook. El concepto original de BTS era similar al del grupo hip
-			hop 1TYM de YG Entertainment;sin embargo, Bang Si-hyuk decidió que la juventud contemporánea necesitaba en su lugar
-			«un héroe que les brindara apoyo». A pesar de que su debut se planificó para 2011 —para lo que colaboró con artistas
-			como Lee Seung-gi, Lim Jeong-hee y 2AM—, este se pospuso para reorganizar la banda y convertirla en una de tipo idol
-			más tradicional. Por otro lado, RM, Suga y J-Hope escribieron el tema «Paldogangsan» para promover la convocatoria
-			Hit It de ese año, en el que emplearon sus dialectos locales en la letra debido a que el evento se llevó a cabo a nivel
-			nacional.
-		</p>
-		<img src="v.jpg" alt="BTS 2020" class="main-content__img--full-width">
-		<p>Bangtan Sonyeondan subió al escenario mundial en 2013 con su primer álbum, 2 Cool 4 Skool. Rápidamente se convirtieron en
-			uno de los nombres más populares del K-Pop, rompiendo récords en Corea del Sur y en el extranjero para conseguir fans de
-			todo el mundo. A pesar de su éxito mundial, la banda de chicos de pop coreano nunca dejó que el estrellato se les
-			subiera a la cabeza. En 2018, el grupo de K-Pop BTS se convirtió en el primer acto surcoreano en encabezar la
-			lista US Billboard 200, que clasifica los 200 álbumes de música más populares de Estados Unidos.
-		</p>
+
+       
     </section>
 </div>
 
@@ -389,7 +343,11 @@
     }
 </script>
 12:54
-
+<li class="menu__hamburger-icon">
+    <a  href="javascript:void(0);" onclick="myFunction()">
+        <i class="lni lni-menu"></i>
+    </a>
+</li>
 
 		
 	
@@ -397,5 +355,7 @@
 	
 </body>
 </html>
+
+
 
 
