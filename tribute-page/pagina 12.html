@@ -20,16 +20,29 @@
             color:#3d0b60 ;
             font-family: 'Roboto', sans-serif;
         }
+
 		h1{
 		    text-align:center ;
-			font-family: Styles;
+			font-family: ArialBlack;
 			color: #4b1c71
 		}
+
 		h2{
 		    text-align:center ;
 			color: #7f4ca5;
-			font-family: waymar;
+			font-family: Calibri;
 		}
+
+		h3{
+		    text-align:center ;
+			font-family: Calibri;
+        }
+
+        p{
+		    text-align:center ;
+			font-family: Calibri;
+        }
+
         #header {
             display: flex;
             flex-direction: column;
@@ -99,6 +112,23 @@
             }
         }
 
+        @media screen and (max-width: 600px) {
+            #links-sidebar {
+                display: none;
+            }
+        }
+
+        #main-content {
+            flex: 6;
+            padding: 10px 20% 10px 10px;
+        }
+
+        @media screen and (max-width: 600px) {
+            #main-content {
+                padding-right: 10px;
+            }
+        }
+
         #main-content-container {
             display: flex;
         }
@@ -110,11 +140,10 @@
 
 		#links-sidebar ul {
             padding: 0 0 0 10px;
+			margin-left: 22px;
         }
 
-		#links-sidebar li {
-            list-style: none;
-        }
+		
 
         #main-content {
             flex: 6;
@@ -216,11 +245,13 @@
 	<img src="bi.jpg" width="100%" height="250%">
 <nav id="navigation-bar" class="navigation-bar">
 	<ul>
-		<li><a class="active" href="pagina4.html">Inicio</a></li>
-		<li><a href="https://bangtan.fandom.com/es/wiki/RM_(mixtape)">mixtape</a></li>
-		<li><a href="https://www.nacionrex.com/bts-rm-curiosidades-talentos-ocultos-t202001040001.html">curiosidades</a></li>
-		<li><a href="https://www.usbtsarmy.com/about-rm/predebut-thru-2014">Pre-debut</a></li>
-		<li><a href="https://www.youtube.com/watch?v=iOjmwAz76g4">Discurso ONU</a></li>
+		<li><a class="active" href="mi pagina wab.html">Inicio</a></li>
+		<li><a href="pagina13.html">Integrantes</a></li>
+		<li><a href="pagina16.html">curiosidades</a></li>
+		<li><a href="pagina14.html">Pre-debut</a></li>
+		<li><a href="pagina17.html"> ONU Love Myself</a></li>
+		<li><a href="pagina15.html"> Peliculas</a></li>
+		<li><a href="pagina18.html"> Fanchat</a></li>
 		<li class="menu__hamburger-icon">
 			<a  href="javascript:void(0);" onclick="myFunction()">
 				<i class="lni lni-menu"></i>
@@ -327,6 +358,10 @@
     </div>
     <div class="footer__more-sites footer__section">
         <h2>Otros de mis sitios</h2>
+		<ul>
+			<span class="social__icon-container"><i class="lni lni-tiktok social__icon"></i></span>
+                <span class="social__icon-handler"> <a href="https://www.tiktok.com/@julieta.jeon"> @julieta.jeon</a> </span>
+		</ul>
     </div>
 </footer>
 </body>

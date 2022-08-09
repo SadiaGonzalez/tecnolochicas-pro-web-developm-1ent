@@ -7,12 +7,16 @@
     <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ejemplo layout flexbox</title>
-	<style>
+    <style>
         html, body {
             display: flex;
             flex-direction: column;
             height: 100%;
         }
+
+		div{
+		    width:100%;
+		}
 
         body {
             margin: 0;
@@ -20,22 +24,25 @@
             color:#3d0b60 ;
             font-family: 'Roboto', sans-serif;
         }
-        h1{
+
+		h1{
 		    text-align:center ;
 			font-family: ArialBlack;
 			color: #4b1c71
 		}
+
 		h2{
 		    text-align:center ;
 			color: #7f4ca5;
 			font-family: Calibri;
 		}
+
 		h3{
 		    text-align:center ;
 			font-family: Calibri;
         }
 
-        p{
+		p{
 		    text-align:center ;
 			font-family: Calibri;
         }
@@ -109,7 +116,7 @@
             }
         }
 
-        @media screen and (max-width: 600px) {
+		@media screen and (max-width: 600px) {
             #links-sidebar {
                 display: none;
             }
@@ -124,6 +131,17 @@
             #main-content {
                 padding-right: 10px;
             }
+        }
+
+		@media screen and (max-width: 600px) {
+            #footer {
+                flex-direction: column;
+            }
+
+			.footer__section {
+				border-bottom: 1px solid;
+				padding-bottom: 10px;
+			}
         }
 
         #main-content-container {
@@ -163,6 +181,14 @@
             display: flex;
             align-items: center;
             flex-direction: column;
+        }
+
+		.footer__more-sites ul {
+            padding: 0 0 0 10px;
+        }
+
+		.footer__more-sites li {
+            list-style: none;
         }
 
         .social__networks {
@@ -226,7 +252,6 @@
 
     </style>
 
-
     <script>
         function myFunction() {
             const navigationBar = document.getElementById("navigation-bar");
@@ -241,26 +266,27 @@
 <body>
 	<img src="bi.jpg" width="100%" height="250%">
 <nav id="navigation-bar" class="navigation-bar">
-    <ul>
-        <li><a class="active" href="mi pagina wab.html">Inicio</a></li>
-        <li><a href="pagina13.html">Integrantes</a></li>
-        <li><a href="pagina16.html">curiosidades</a></li>
-        <li><a href="pagina14.html">Pre-debut</a></li>
-        <li><a href="pagina17.html"> ONU Love Myself</a></li>
-        <li><a href="pagina15.html"> Peliculas</a></li>
-        <li><a href="pagina18.html"> Fanchat</a></li>
-        <li class="menu__hamburger-icon">
-            <a  href="javascript:void(0);" onclick="myFunction()">
-                <i class="lni lni-menu"></i>
-            </a>
-        </li>
-    </ul>
+	<ul>
+		<li><a class="active" href="pagina4.html">Inicio</a></li>
+		<li><a href="pagina13.html">Integrantes</a></li>
+		<li><a href="pagina16.html">curiosidades</a></li>
+		<li><a href="pagina14.html">Pre-debut</a></li>
+		<li><a href="pagina17.html"> ONU Love Myself</a></li>
+		<li><a href="pagina15.html"> Peliculas</a></li>
+		<li><a href="pagina18.html"> Fanchat</a></li>
+		<li class="menu__hamburger-icon">
+			<a  href="javascript:void(0);" onclick="myFunction()">
+				<i class="lni lni-menu"></i>
+			</a>
+		</li>
+	</ul>
 </nav>
 
 
 
 
 <div id="main-content-container">
+
     <aside id="links-sidebar" >
 		<br>
 		<h3><ul style="list-style-type:circle"> Grandes exitos </h3></ul>
@@ -296,37 +322,38 @@
     
     <section id="main-content">
 		<header id="header">
-			<h1>Fanchat</h1>
-			<p>Para nadie en un secreto que el éxito del septeto surcoreano, BTS va en aumento y cada vez existen más personas que se suman al fandom para 
-                admirar y reconocer la música y talento de esta famosa banda de k-pop.</p>
+			<h1>Bangtan</h1>
+			<p> "No importa quien seas, tu genero, tu color de piel, tu
+				identidad. Encuentra tu nombre y encuentra tu voz"
+				<br>
+				-Kim Namjoon-</p>
 		</header>
-		    <p>Seguramente más de una vez has visto una presentación en vivo de los idols de BTS y en el fondo los gritos a coro de ARMY te han llamado la atención. 
-                ¿Qué es lo que dicen las fans en los conciertos de Bangtan? </p>
-		    <p>Ahora, con los conciertos presenciales y ONLINE que se vienen, como el Permission To Dance On Stage, es necesario que como fan te sepas el fanchant
-                oficial de la banda. A continuación te explicamos qué es un fanchant y cómo hacerlo correctamente. </p>
-            <h3>¿QUE SON LOS FANCHAT?</h3>
-            <p>Los fanchants son un cántico que crearon los fanáticos o clubs de fans para apoyar a su grupo favorito de k-pop, es decir no son exlusivos de BTS. 
-               Estos son coreados durante las presentaciones de los idols para darles ánimos y mostrarles su apoyo.</p>
-            <p>En el caso de BTS, el fanchant más popular o el más usado entre ARMY es uno en el que interpretan los nombres reales de los integrantes de la agrupación
-                y están ordenados de la siguiente manera:</p>
-                <ul style="list-style-type: disco; text-align: center;">¡Kim Namjoon!</ul>
-                <ul style="list-style-type: disco; text-align: center;">¡Kim Seokjin!</ul>
-                <ul style="list-style-type: disco; text-align: center;">¡Min Yoongi!</ul>
-                <ul style="list-style-type: disco; text-align: center;">¡Jung Hoseok!</ul>
-                <ul style="list-style-type: disco; text-align: center;">¡Park Jimin!</ul>
-                <ul style="list-style-type: disco; text-align: center;">¡Kim Taehyung!</ul>
-                <ul style="list-style-type: disco; text-align: center;">¡Jeon Jungkook!</ul>
-                <ul style="list-style-type: disco; text-align: center;">¡BTS!</ul>
-            <h3>Algunas presentaciones</h3>
-                <li><a href="https://www.youtube.com/watch?v=B4zv9pecflc"> BTS Fanchat En vivo</a></li>
-                <li><a href="https://www.youtube.com/watch?v=dKHsskaD_4s"> fanchat Boy With Luv</a></li>
-                <li><a href="https://www.youtube.com/watch?v=0BUWwc6cKcE"> fanchat Save me</a></li>
-            
+        <img src="ki.jpg" alt="BTS 2021" class="main-content__img--full-width">
 
-        
-			
-
-       
+        <h2>Biografía</h2>
+        <p>BTS es un grupo surcoreano formado en Seúl en 2010 y que debutó en 2013 bajo la compañía Big Hit Music. 
+			Está compuesto por siete integrantes: Jin, Suga, J-Hope, RM, Jimin, V y Jungkook, quienes coescriben y
+			coproducen la mayor parte de su material discográfico. A pesar de haber sido creado con un estilo principalmente
+			hip hop, ha llegado a incorporar una gran variedad de géneros en su repertorio musical.
+		</p>
+        <p>La formación de BTS empezó en 2010, después de que el CEO de Big Hit, Bang Si-hyuk, firmara un contrato con 
+			RM tras escucharlo rapear. El mismo año, la compañía realizó las audiciones Hit It, en las que Suga quedó en 
+			segundo lugar.Posteriormente se unió el resto de integrantes y, aunque la alineación se cambió en varias ocasiones,
+			finalizó con Jin, Suga, J-Hope, RM, Jimin, V y Jungkook. El concepto original de BTS era similar al del grupo hip
+			hop 1TYM de YG Entertainment;sin embargo, Bang Si-hyuk decidió que la juventud contemporánea necesitaba en su lugar
+			«un héroe que les brindara apoyo». A pesar de que su debut se planificó para 2011 —para lo que colaboró con artistas
+			como Lee Seung-gi, Lim Jeong-hee y 2AM—, este se pospuso para reorganizar la banda y convertirla en una de tipo idol
+			más tradicional. Por otro lado, RM, Suga y J-Hope escribieron el tema «Paldogangsan» para promover la convocatoria
+			Hit It de ese año, en el que emplearon sus dialectos locales en la letra debido a que el evento se llevó a cabo a nivel
+			nacional.
+		</p>
+		<img src="v.jpg" alt="BTS 2020" class="main-content__img--full-width">
+		<p>Bangtan Sonyeondan subió al escenario mundial en 2013 con su primer álbum, 2 Cool 4 Skool. Rápidamente se convirtieron en
+			uno de los nombres más populares del K-Pop, rompiendo récords en Corea del Sur y en el extranjero para conseguir fans de
+			todo el mundo. A pesar de su éxito mundial, la banda de chicos de pop coreano nunca dejó que el estrellato se les
+			subiera a la cabeza. En 2018, el grupo de K-Pop BTS se convirtió en el primer acto surcoreano en encabezar la
+			lista US Billboard 200, que clasifica los 200 álbumes de música más populares de Estados Unidos.
+		</p>
     </section>
 </div>
 
@@ -365,7 +392,7 @@
     </div>
     <div class="footer__more-sites footer__section">
         <h2>Otros de mis sitios</h2>
-        <ul>
+		<ul>
 			<span class="social__icon-container"><i class="lni lni-tiktok social__icon"></i></span>
                 <span class="social__icon-handler"> <a href="https://www.tiktok.com/@julieta.jeon"> @julieta.jeon</a> </span>
 		</ul>
@@ -385,11 +412,7 @@
     }
 </script>
 12:54
-<li class="menu__hamburger-icon">
-    <a  href="javascript:void(0);" onclick="myFunction()">
-        <i class="lni lni-menu"></i>
-    </a>
-</li>
+
 
 		
 	
